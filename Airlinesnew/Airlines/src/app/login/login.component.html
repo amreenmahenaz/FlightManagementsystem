@@ -1,0 +1,41 @@
+<div style="background-image: url('https://s.abcnews.com/images/Politics/GTY_airplane_sr_131211_33x16_992.jpg'); ">
+
+<!-- <div *ngIf=invalidLogin;>
+    <h4 style="text-align:center;">Invalid Login ..!!</h4>
+    <!-- <a class="nav-link" [routerLink]="['/searchFlight']" ><h4 style="text-align:center;">Book A Ticket</h4></a> -->
+    <!-- </div> --> -->
+<div class="wrapper">
+  <div class="row">
+      <div class="card col-md-4 offset-md-4 shadow-lg p-3 mb-5 bg-white">
+          <h2 style="margin-top: 20px;background-color: cornflowerblue;">Login</h2>
+         <form #loginForm='ngForm' (ngSubmit)="onLogin(loginForm)">
+          <div class="row">
+              Email : <input class="form-control" type="text" name="Email" [(ngModel)]="user.userEmail">
+          </div>
+          <div class="row">
+              Password : <input class="form-control" type="password" name="Password" [(ngModel)]="user.userPassword">
+          </div>
+          <div class="row">
+              <button  type="submit" class="logInBtn btn btn-success">
+                  Login
+              </button>       
+          </div>
+           
+                  </form>
+          <hr>
+          <div class="row">
+              <span style="margin-left: auto; margin-right: auto;">
+                  OR<br>
+                  Sign Up for a new account
+              </span>
+          </div>
+          <div class="row">
+              <button type="button" class="btn btn-primary signUpBtn">
+                <a class="nav-link" [routerLink]="['/registerLink']">SignUp</a>
+              </button>
+          </div>
+        
+      </div>
+  </div>
+</div>
+</div>

@@ -1,0 +1,45 @@
+<div style="background-image: url('https://s.abcnews.com/images/Politics/GTY_airplane_sr_131211_33x16_992.jpg'); ">
+<form #userForm="ngForm" (ngSubmit)=registerUser()>
+
+<div class="wrapper">
+  <div class="row">
+      <div class="card col-md-4 offset-md-4 shadow-lg p-3 mb-5 bg-white">
+        <h2 style="margin-top: 20px;background-color: cornflowerblue;">Register</h2>
+          <div class="row">
+              First Name : <input (blur)="validateName(); enableButton();" class="form-control" type="text" name="firstName" [(ngModel)]="user.firstName">
+              <small *ngIf="nameFlag" style="color: red;">Invalid User Name</small>
+          </div>
+          <div class="row">
+            Last Name : <input (blur)="validateName();enableButton(); " class="form-control" type="text" name="lastName" [(ngModel)]="user.lastName">
+            <small *ngIf="nameFlag2" style="color: red;">Invalid User Name</small>
+        </div>
+          <div class="row">
+              Password : <input class="form-control" type="password" name="userPassword" [(ngModel)]="user.userPassword" #password="ngModel"
+              minlength="5" maxlength="50" required>
+              <!-- <ng2-password-strength-bar [passwordToCheck]="user.userPassword" [barLabel]="barLabel" [barColors]="myColors"></ng2-password-strength-bar> -->
+              <!-- <password-strength-meter [password]="user.userPassword" [minPasswordLength]=8 [colors]="barLabel" [enableFeedback]=true></password-strength-meter> -->
+          </div>
+          <div class="row">
+            Date Of Birth : <input (blur)="validateEmail(); enableButton();" class="form-control" type="date" name="userDateOfBirth" [(ngModel)]="user.userDateOfBirth">
+            <small *ngIf="emailFlag" style="color: red;">Invalid Date of Birth</small>
+        </div>
+          
+          <div class="row">
+              Email : <input (blur)="validateEmail(); enableButton();" class="form-control" type="email" name="userEmail" [(ngModel)]="user.userEmail">
+              <small *ngIf="emailFlag" style="color: red;">Invalid Email</small>
+          </div>
+          <div class="row">
+            Mobile No : <input (blur)="validatePhone(); enableButton();" class="form-control" type="number" name="userMobile" [(ngModel)]="user.userMobile">
+            <small *ngIf="phoneFlag" style="color: red;">Invalid Phone Number</small>
+        </div>
+          <div class="row">
+              <button [disabled]="buttonFlag" class="regBtn btn btn-success" type=submit (click)="btnClick();">
+                  Register
+                  
+                </button>
+          </div>
+      </div>
+  </div>
+</div>
+</form>
+</div>

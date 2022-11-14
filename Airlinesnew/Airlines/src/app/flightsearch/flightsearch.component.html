@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title>
+            Book Ticket
+        </title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    </head>
+    <body>
+        <h1 style="text-align: center; color:#fff;">Explore the sky through the clouds</h1>
+
+        <div class="booking-form-box">
+            <div class="radio-btn">
+                <input type="radio" class="btn" name="check" checked="checked">
+                <span>Round Trip</span><span>   </span>
+                <input type="radio" class="btn" name="check" ><span>One Way</span>
+                <span></span>
+            </div>
+            <div class="booking-form">
+                <label>Flying from</label>
+                <input type="text" class="form-control" name="source" placeholder="City">
+                <label>Flying To</label>
+                <input type="text" class="form-control" name="destination" placeholder="City" >
+                <div class="input-grp">
+                    <label>Departing</label>
+                    <input type="date" class="form-control name= select-date" name="departureDate" >
+                </div>
+                <div class="input-grp">
+                    <label>Returning</label>
+                    <input type="date" class="form-control select-date" name="returnDate" >
+                </div>
+                <div class="input-grp">
+                    <label>Adults</label>
+                    <input type="number" class="form-control" value="1" >
+                </div>
+                <div class="input-grp">
+                    <label>Children</label>
+                    <input type="number" class="form-control" value="0" > 
+                </div>
+                <div class="input-grp">
+                    <label>Travel Class</label>
+                    <select class="custom-select" [(ngModel)]="flight.class">
+                        <option value="1">Economy Class</option>
+                        <option value="1">Business Class</option>
+                    </select>
+                </div>
+                <div class="input-grp">
+                    <button type="submit" class="btn btn-primary flight">Search Flights</button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+
