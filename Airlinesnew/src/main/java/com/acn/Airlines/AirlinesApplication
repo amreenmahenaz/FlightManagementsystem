@@ -1,0 +1,19 @@
+package com.acn.Airlines;
+
+import org.springframework.boot.SpringApplication;
+
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.context.annotation.ComponentScan;
+
+
+@SpringBootApplication
+@ComponentScan({"com.acn"})
+@EntityScan(basePackages = "com.acn")
+public class AirlinesApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(AirlinesApplication.class, args);
+	}
+
+}
